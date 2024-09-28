@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+  --main-color:#be9c79;
+  --black:#333;
+  --white:#fff;
+  --light-color:#666;
+  --border:.2rem solid var(--black);
+  --box-shadow:0  .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+*{
+  font-family: 'Nunito',sans-serif;
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  outline:none;border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*::selection{
+  background-color: var(--main-color);
+  color:var(--white);
+}
+
+::-webkit-scrollbar{
+  height: .5rem;
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--black);
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top:6rem;
+
+}
+
+
+section{
+  padding:3rem 2rem;
+  max-width: 1200px;
+  margin:0 auto;
+}
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading img{
+  height: 4rem;
+}
+
+.heading h3{
+  font-size: 4rem;
+  color:  var(--black);
+  font-family: 'Merienda one',cursive;
+}
+/*Hero btn*/
+
+.btn:hover{
+  background-color: var(--black);
+  color:var(--white);
+}
+
+
+.header{
+position: sticky;
+z-index:1000;
+/*background: linear-gradient(90deg, var(--black),transparent 40%);*/
+}
+
+.header .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 70px 10px 20px;
+}
+.H-text{
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+}
+.logo h2{
+    color: black;
+}
+
+.header .flex .navbar a{
+  margin-left:2rem;
+  font-size: 1.5rem;
+  color: black;
+  display:inline-block;
+  padding-left: 15px;
+}
+
+.header .flex .navbar a:hover{
+  text-decoration: underline;
+  color:var(--main-color);
+}
+
+#menu-btn{
+  display: none;
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+
+
+.home-bgn .home{
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-bgn .home  .content{
+  width: 50rem;
+  color: black;
+}
+.content{
+  padding-top: 15rem;
+  padding-left: 1.5rem;
+  margin-left: 0;
+}
+
+
+.cta-container {
+  position: relative;   /* Position background relative to the container */
+  width: 300px;         /* Set the width of the button container */
+  height: 100px;        /* Height for the container */
+  margin-top: 2px;     /* Add space between the text and button */
+  overflow: visible;    /* Allow the background to extend outside the container */
+}
+
+/* Container that holds the button and the background */
+.cta-container {
+  position: relative; /* Allows child elements to be positioned inside */
+  display: flex;       /* Center the button horizontally and vertically */
+  align-items: center;
+  width: 300px;        /* Set width of the container */
+  height: 100px;       /* Set height of the container */
+      /* Adjust positioning relative to other content */
+}
+
+/* The dotted background */
+.cta-container::before {
+  content: '';
+  position: absolute;     
+  top: 40px;             
+  left: -40px;            
+  width: 110%;            
+  height: 100%;           
+  background-image: url('img/Dot\ Ornament.png'); 
+  background-size: contain; 
+  background-repeat: repeat-x; 
+  z-index: -1;    
+      
+}
+
+/* Button styling */
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background-color:rgb(42, 42, 247);
+  padding:15px 40px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 30px;
+}
+/*hero Image*/
+/* Container for the image */
+.image-container {
+  position: relative;  /* Ensures that the pseudo-elements are positioned relative to this container */
+  display: inline-block;
+}
+
+
+
+/* Circle on the top left */
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;          /* Position the circle slightly above the image */
+  left: 50px;         /* Position the circle slightly to the left of the image */
+  width: 100px;        /* Width of the top-left circle */
+  height: 100px;       /* Height of the top-left circle */
+  background-color: #dfefff; 
+  border-radius: 50%; 
+  z-index: -1;        
+}
+
+/* Circle on the bottom right */
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: -70px;       /* Position the circle below the image */
+  right: -30px;        /* Position the circle slightly to the right of the image */
+  width: 120px;        /* Width of the bottom-right circle */
+  height: 120px;       /* Height of the bottom-right circle */
+  background-color: #fdf1d0;  /* Light yellow color */
+  border-radius:1px 1px 100px 0px ;  
+  z-index: -1;        
+}
+
+
+.image-container {
+    width: 50%;
+    overflow: visible;
+    margin-left: 3rem;
+   
+  }
+
+ .image-container img{
+    padding-left: 10rem;
+    width: 752px;
+    height: 512px;
+ }
+
+.home-bgn .home  .content h3{
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+}
+
+.home-bgn .home  .content p{
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5em;
+  max-width: 471px;
+  margin-bottom: 15px;
+}
+
+.about-section{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 70px 10px 10px;
+}
+.about-cont{
+  font-size: 16px;
+  padding-left: 16px;
+  padding-bottom: 30px;
+}
+.about-cont h2{
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+.img-span{
+  padding-top: 15px;
+}
+.img-span img{
+  margin-left:2rem;
+  height: 4rem; 
+  display:inline-block;
+  padding-left: 15px;
+}
+.img-span .uber{
+  height:30px;
+  padding-bottom: 9.8px;
+}
+.img-span .Amazon{
+  height:38px;
+  padding-top: 8px;
+}
+
+
+/*Services Section*/
+.container{
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sec-content{
+  display: flex;
+  gap: 20rem;
+}
+.sec-text{
+  font-size: 14px;
+  width: 496px;
+  padding-top: 20rem;
+  align-items: center;
+}
+
+.sec-text h2{
+  font-size: 26px;
+}
+
+.services{
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.service-card h3{
+  font-size: 14px;
+  padding: 15px 0px 15px;
+}
+.icon{
+  padding: 5rem 0rem 5rem;
+}
+
+.icon img{
+  padding-top:6px ;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+      font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:769px){
+#menu-btn{
+    display: inline-block;
+    transition: .2s linear;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180deg);
+  }
+
+  .header .flex .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+    border-top:var(--border);
+    border-bottom:var(--border);
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    transition: .3s linear;
+    background-color: var(--black);
+  }
+
+  .header .flex .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+  }
+
+
+    .header .flex .navbar a{
+      display: block;
+      margin: 2rem;
+      color: var(--white);
+      font-family: 'Nunito',sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .home-bgn{
+      background-position: left;
+    }
+
+    .home-bgn .home{
+      justify-content: center;
+    }
+  .home-bgn .home .content h3{
+    font-size: 4rem;
+  }
+
+.about .content h3{
+  font-size: 3rem;
+}
+
+}
+
+
+
+
+@media (max-width:450px){
+
+    html{
+      font-size: 50%;
+    }
+.heading h3{
+  font-size: 2.5rem;
+}
+}
+
+
+
+
+  @media (max-width:414px){
+    
+  #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+      transform: rotate(180deg);
+    }
+
+    .header .flex .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      font-size: 2rem;
+      /*background: linear-gradient(90deg, var(--white),transparent 20%);*/
+      border-top:var(--border);
+      border-bottom:var(--border);
+      clip-path: polygon(0 0,100% 0,100% 0,0 0);
+      transition: .3s linear;
+      background-color: var(--black);
+    }
+
+    .header .flex .navbar.active{
+      clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+
+      .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+        color: var(--white);
+        font-family: 'Nunito',sans-serif;
+        font-size: 1.5rem;
+      }
+
+      .home-bgn{
+        background-position: left;
+      }
+
+      .home-bgn .home{
+        justify-content: center;
+      }
+    .home-bgn .home .content h3{
+      font-size: 4rem;
+    }
+
+  .about .content h3{
+    font-size: 3rem;
+  }
+
+  }
